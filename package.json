@@ -1,0 +1,14 @@
+{
+  "name": "feature-flag-service-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Self-hosted feature flag service, SDK, and admin dashboard.",
+  "workspaces": [
+    "service",
+    "sdk"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=sdk && npm run build --workspace=service",
+    "test": "npm test --workspace=sdk && npm test --workspace=service"
+  }
+}
